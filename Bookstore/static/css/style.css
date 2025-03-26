@@ -1,0 +1,449 @@
+body {
+    font-family: Arial, sans-serif;
+    height: auto;
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    position: sticky;
+    top: 10;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.navbar_inner{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.Boocorner{
+    flex: 1;
+}
+.navbar_items{
+    flex: 1.4;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar_items a{
+    font-weight: 700;
+    color: rgb(12, 129, 125);
+    text-decoration: none;
+} 
+.navbar_items a:hover{
+    color: rgb(40, 146, 196);
+}
+.Boocorner{
+    font-size: 24px;
+}
+.Boocorner a{
+    color: rgb(40, 146, 196);
+    text-decoration: none;
+}
+.books_main{
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    height: auto;
+    width: 15%;
+    border: 1px solid rgba(128, 128, 128, 0.385); 
+    box-shadow: 2px 1px 2px 1px rgba(128, 128, 128, 0.218);
+}
+
+/* .............Home............. */
+
+.home_section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.home_main{
+    display: flex;
+    width: 80%;
+}
+.home_main_left{
+    flex: 1.5;
+    text-align: center;
+    margin-top: 15%;
+    width: 800px;
+    height: 350px;
+    font-size: 20px;
+    color: rgb(12, 129, 125);
+}
+.home_main_left_inner{
+    width: 90%;
+}
+.home_main_left_inner h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+.discover_btn{
+    background-color: white;
+    border: 2px solid rgb(12, 129, 125);
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    color: rgb(12, 129, 125);
+}
+.discover_btn:hover{
+    background-color: rgb(12, 129, 125);
+    color: white;
+    border: none;
+}
+.home_main_right{
+    flex: 1;
+}
+
+/* ...............Profile............ */
+
+.profile_main{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.125);
+    background-color: rgba(182, 228, 246, 0.274);
+}
+.edit{
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.edit a{
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(12, 129, 125);
+}
+.profile-card h5{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: -1%;
+}
+.profile-card p{
+    font-size: 17px;
+    margin-bottom: -1%;
+}
+.profile_details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.profile_details_inner{
+    width: 80%;
+}
+hr{
+    border: 1px solid rgba(128, 128, 128, 0.319);
+    height: .1px;
+    background-color: rgba(218, 214, 214, 0.301);
+}
+.profile_image{
+    border-radius: 90%;
+    margin-left: 8%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* ...............Books............... */
+.book_section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* This will allow the cards to wrap on smaller screens */
+    gap: 20px; /* Gap between cards */
+    width: 100%;
+    padding: 0;
+    background-color: rgba(182, 228, 246, 0.344);
+    margin: 0;
+}
+
+.books_main {
+    flex: 1 1 250px; /* Ensure the card takes up 1 unit of space but doesn't grow beyond 250px */
+    max-width: 250px; /* Control max-width for each book card */
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
+    text-align: center;
+}
+
+.book_image {
+    width: 100%; /* Ensure images are resized correctly without stretching */
+}
+
+.book_details {
+    width: 100%;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.book_details_inner {
+    width: 100%; /* Make the content take the full width */
+    font-size: 14px;
+}
+.book_details_inner p{
+    color: rgb(15, 78, 78);
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    .books_main {
+        flex: 1 1 100%; /* On small screens, take up full width */
+        max-width: 100%; /* Ensure it takes the full width on smaller screens */
+    }
+
+    .book_image {
+        height: 200px; /* Adjust the image size for smaller screens */
+    }
+
+    .book_details_inner {
+        font-size: 12px; /* Adjust font size on smaller screens */
+    }
+}
+
+/* .............pagination.............. */
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.pagination .current {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: rgb(12, 129, 125);
+    color: white;
+    border-radius: 3px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* ..............reset password....... */
+
+.reset_pass_section{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(160, 208, 227, 0.299);
+}
+.reset_pass_section h2{
+    color: rgb(12, 129, 125);
+}
+.password_reset_form{
+    margin: 0;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.reset_pass ul{
+    display: none;
+}
+.reset_pass{
+    width: 90%;
+}
+.reset_pass input{
+    width: 100%;
+    outline: none;
+    background-color: rgba(160, 208, 227, 0.105);
+}
+.reset_pass_outer{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.207);
+    margin-left: 15%;
+    text-align: left;
+    width: 32%;
+    height: 250px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.125);
+    background-color: white;
+}
+.save_btn_outer{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.save_btn{
+    background-color: white;
+    border: 2px solid rgb(12, 129, 125);
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    color: rgb(12, 129, 125);
+}
+.save_btn:hover{
+    background-color: rgb(12, 129, 125);
+    color: white;
+    border: none;
+}
+
+/* .............register............. */
+
+.register_section{
+    display: flex;
+    width: 100%;
+    height: 800px;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(160, 208, 227, 0.299);
+}
+.register_section h2{
+    color: rgb(12, 129, 125);
+}
+.register_form{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.register_main_inner ul{
+    display: none;
+}
+.register_main_inner{
+    width: 90%;
+    margin-top: 5%;
+}
+.register_main_inner input{
+    width: 100%;
+    outline: none;
+    margin-top: 2%;
+    background-color: rgba(160, 208, 227, 0.105);
+}
+.register_main{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.207);
+    margin-left: 40%;
+    text-align: left;
+    width: 32%;
+    height: 600px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.125);
+    background-color: white;
+}
+.register_btn_outer{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.register_btn{
+    background-color: white;
+    border: 2px solid rgb(12, 129, 125);
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: rgb(12, 129, 125);
+}
+.register_btn:hover{
+    background-color: rgb(12, 129, 125);
+    color: white;
+    border: none;
+} 
+
+/* ........... login .................. */
+
+.login_section{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(160, 208, 227, 0.299);
+}
+.login_section h2{
+    color: rgb(12, 129, 125);
+}
+.login_form{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.login_main_inner{
+    width: 90%;
+    margin-top: 5%;
+}
+.login_main_inner input{
+    width: 100%;
+    outline: none;
+    margin-top: 2%;
+    background-color: rgba(160, 208, 227, 0.105);
+}
+.login_main{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.207);
+    margin-left: 40%;
+    text-align: left;
+    width: 32%;
+    height: 300px;
+    border-radius: 3px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.125);
+    background-color: white;
+}
+.login_btn_outer{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login_btn{
+    background-color: white;
+    border: 2px solid rgb(12, 129, 125);
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: rgb(12, 129, 125);
+}
+.login_btn:hover{
+    background-color: rgb(12, 129, 125);
+    color: white;
+    border: none;
+} 
+
+
+/* ..............footer............. */
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.footer_inner{
+    height: 40px;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home {% endblock %}
+{% block content %}
+
+{% for i in messages %}
+{{i}}
+{% endfor %}
+
+<section class="home_section">
+    <div class="home_main">
+        <div class="home_main_left">
+            <h2>Get Lost in a Great Book!</h2>
+            <div><a href="{% url 'book_list' %}"><button class="discover_btn">Discover Books</button></a></div>
+        </div>
+        <div class="home_main_right">
+            <img height="700" width="800" src="https://img.freepik.com/premium-photo/stylish-diligent-student-girl-immersed-reading-fascinating-book-her-smart-eyes_585982-3726.jpg" alt="image1">
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Books List {% endblock %}
+{% block content %}
+<section class="book_section">
+        {% if page %}
+        {% for i in page %}
+           <div class="books_main">
+              <div>
+                <img class="book_image" src="{{i.Image.url}}" alt="{{i.Title}}" height="300">
+            </div>
+           <div class="book_details">
+            <div class="book_details_inner">
+                <p>{{i.Title}} </p>
+                By : {{i.Author.Name}} <br>
+                Genre : {{i.Gener.gener}} <br>
+                Publish_date : {{i.Publish_date}}
+            </div>
+           </div>
+    </div>
+{% endfor %}
+{% else %}
+    <p>no book found</p>
+{% endif %}
+</section>
+
+<!-- Pagination Controls -->
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page.has_previous %}
+            <a href="?page=1">&laquo; First</a>
+            <a href="?page={{ page.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <!-- Page number links -->
+        {% for num in page.paginator.page_range %}
+            {% if num == page.number %}
+                <span class="current">{{ num }}</span>  <!-- Highlight current page -->
+            {% else %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">Next</a>
+            <a href="?page={{ page.paginator.num_pages }}">Last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+    {% endblock %}

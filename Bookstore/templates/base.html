@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav><div class="navbar">
+      <div class="navbar_inner">
+        <div class="Boocorner"> <a href="{% url 'homepage' %}">BooCorner</a></div>
+        <div class="navbar_items"> <a href="{% url 'homepage' %}">Home</a>
+         {% if user.is_authenticated %}
+         <a href="{% url 'Profile' %}">Profile</a>
+         <a href="{% url 'authlogout' %}">Logout</a>
+         <a href="{% url 'book_list' %}">Books</a>
+         <a href="{% url 'reset_password' user_id=user.id %}">Reset Password</a>
+         {% else %}
+         <a href="{% url 'authregister' %}">Register</a>
+         <a href="{% url 'authlogin' %}">Login</a>
+         {% endif %}</div>
+      </div>
+        </div>
+    </nav>
+
+        {% block content %}
+
+        {% endblock %}
+
+<footer><div class="footer_inner">© 2025 All Rights Reserved. By HTML Design</div></footer>
+
+</body>
+</html>

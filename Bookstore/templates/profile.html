@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile page {% endblock %}
+
+{% for i in messages %}
+{{i}}
+{% endfor %}
+{% block content %}    
+{% if profile %}
+<div class="profile_main">
+    <div class="profile-card">
+        <div class="edit"><a href="{% url 'Edit_profile' %}">Edit Profile</a></div>
+    <div>
+        <img class="profile_image" src="{{ profile.upload.url }}" alt="Profile Image" height="100" width="100">
+    </div>
+    <div class="profile_details">
+        <div class="profile_details_inner">
+            <h5>Full Name</h5>
+            <p>{{ profile.first_name }} {{ profile.last_name }}</p>
+            <div><hr></div>
+            <h5>Email</h5>
+            <p>{{ profile.user.email }}</p>
+            <div><hr></div>
+            <h5>Phone</h5>
+            <p>{{ profile.phone }}</p>
+            <div><hr></div>
+            <h5>Age</h5>
+            <p>{{ profile.age }}</p>
+            <div><hr></div>
+            <h5>Address</h5>
+            <p>{{ profile.address }}</p>
+            <div><hr></div>
+        </div>    
+</div>
+</div>
+</div>
+{% endif %}
+{% endblock %}
