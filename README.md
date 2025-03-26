@@ -1,5 +1,4 @@
-Bookstore Project
-Overview
+Bookstore 
 This is a simple Bookstore Web Application built using Django (Python framework). It allows users to search, view, and manage books, including details like title, author, and genre. The project includes features for user authentication (sign up, log in, password reset) and book search functionality based on author_name, genre, and title.
 
 Features
@@ -27,13 +26,13 @@ Python 3.x
 
 Django 3.x or higher
 
-SQLite (or any other database you configure)
+Postgresql
 
 Installation
 1. Clone the repository
 bash
 Copy
-git clone https://github.com/yourusername/bookstore-project.git
+git clone https://github.com/anjalyanju123/mini project.git
 cd bookstore-project
 2. Set up a virtual environment (optional but recommended)
 bash
